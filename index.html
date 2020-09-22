@@ -8,21 +8,27 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
     <div class="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
-        </ul>
+        <nav role="navigation" id="nav">
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="https://google.com">Google</a></li>
+            </ul>
+        </nav>
     </div>
-
-    <div class="hero">
+    <ul class="skip-links">
+        <li><a href="#main">Skip link to main</a></li>
+        <li><a href="#nav">Skip link to navigation</a></li>
+    </ul>
+    
+    <!-- This is an A11y Change, added title to background-image as alternative text-->
+    <div class="hero" title="Cellphone and Laptop">
         <h1>Personal Budget</h1>
         <h2>A personal-budget management app</h2>
     </div>
-
+    <main id="main">
     <div class="container center">
 
         <div class="page-area">
@@ -63,6 +69,7 @@
         </div>
 
     </div>
+    </main>
 
     <div class="bottom">
 
