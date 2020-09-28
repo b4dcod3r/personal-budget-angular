@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/b4dcod3r/personal-budget#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "express": "^4.17.1"
   }
 }

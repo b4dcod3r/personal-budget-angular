@@ -62,7 +62,7 @@ div.menu ul li a:hover  {
 div.hero {
     height: 350px;
     background-color: #b4c6f0;
-    background-image: url('bg.png');
+    background-image: url('../pic/bg.png');
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -102,14 +102,14 @@ div.hero h2 {
 }
 
 .center {
-    text-align: center;
+    text-align: right;
 }
 
 .container div.text-box {
     display: inline-block;
     width: 100%;
     max-width: 340px;
-    text-align: justify;
+    text-align: right;
     margin: 20px;
 }
 
