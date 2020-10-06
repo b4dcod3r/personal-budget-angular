@@ -28,28 +28,30 @@ export class HomepageComponent implements OnInit {
     labels: []
 };
 
-  constructor(private http: HttpClient) { }
+createChart(){
+  // var ctx = document.getElementById("pieChart").getContext("2d");
+  var ctx = document.getElementById("pieChart");
+  var myPieChart = new Chart(ctx, {
+      type: 'pie',
+      data: this.dataSource
+  });
+}
+
+constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:3000/budget')
     .subscribe((res: any) => {
-      for (var i = 0; i < res.data.myBudget.length; i++){
+      for (var i = 0; i < res.myBudget.length; i++){
         this.budget_values.push(res.myBudget[i].budget);
         this.budget_labels.push(res.myBudget[i].label);
         this.myBudget_dict[String(res.myBudget[i].label)] = res.myBudget[i].budget;
         this.dataSource.datasets[0].data.push(res.myBudget[i].budget);
         this.dataSource.labels.push(res.myBudget[i].label);
-        this.createChart(); 
-      }  
-    });
-  } 
-  createChart(){
-    // var ctx = document.getElementById("pieChart").getContext("2d");
-    var ctx = document.getElementById("pieChart");
-    var myPieChart = new Chart(ctx, {
-        type: 'pie',
-        data: this.dataSource
+        
+      }
+      this.createChart();   
     });
   }
-
+  
 }
